@@ -5,7 +5,6 @@ import { Message } from '@/types/chat';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import LoadingDots from '@/components/ui/LoadingDots';
-import { Document } from 'langchain/document';
 
 export default function Home() {
   const [query, setQuery] = useState<string>('');
@@ -15,7 +14,6 @@ export default function Home() {
     messages: Message[];
     pending?: string;
     history: [string, string][];
-    pendingSourceDocs?: Document[];
   }>({
     messages: [
       {
